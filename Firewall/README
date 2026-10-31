@@ -1,0 +1,82 @@
+# OPNsense Firewall Deployment
+
+**Platform:** OPNsense  
+**Hardware:** Lenovo ThinkCentre M700 Mini  
+**Deployment Status:** In Progress
+
+## Overview
+
+Deploying an OPNsense-based firewall as part of a self-hosted homelab focused on network security, infrastructure management, network segmentation, and secure access to internal services.
+
+The firewall will serve as a core component of the network infrastructure, supporting future VLAN segmentation, network access control policies, and connectivity between physical and virtualized environments.
+
+This project provides hands-on experience in firewall administration, TCP/IP networking, infrastructure deployment, and network security engineering.
+
+## Implementation Progress
+
+### Initial Deployment
+
+- Installed OPNsense on the Lenovo ThinkCentre M700 Mini.
+- Verified successful operating system startup and console access.
+- Identified and assigned the LAN network interface.
+- Configured static IPv4 addressing for the LAN interface.
+- Established and verified a physical Ethernet link with the Cisco switch.
+
+### Network Services
+
+- Configured the LAN DHCP server and defined an IPv4 address allocation range.
+- Retained HTTPS for secure administrative access.
+- Generated a new self-signed certificate for the Web GUI.
+- Deferred IPv6 configuration during initial deployment to prioritize IPv4 network implementation.
+
+### Network Architecture
+
+The initial deployment uses an isolated network environment to configure and validate infrastructure components before integration with the existing home network.
+
+The planned architecture includes:
+
+- **Firewall:** OPNsense for network security and traffic management.
+- **Switching:** Cisco switch for internal device connectivity and future VLAN segmentation.
+- **Compute:** Supermicro servers for virtualization, storage, and self-hosted services.
+- **Management:** Web-based administration and secure remote access.
+
+## Planned Enhancements
+
+### Firewall & Network Services
+
+- [ ] Validate LAN connectivity and DHCP functionality.
+- [ ] Establish and verify Web GUI management access.
+- [ ] Configure firewall policies and access control rules.
+- [ ] Implement VLAN-based network segmentation.
+- [ ] Configure secure remote administration.
+- [ ] Implement network logging and monitoring.
+
+### Infrastructure Integration
+
+- [ ] Configure Cisco switch management.
+- [ ] Establish VLAN connectivity between the firewall and switch.
+- [ ] Integrate Supermicro server infrastructure.
+- [ ] Configure network access for self-hosted services.
+- [ ] Implement secure access to internal resources from remote locations.
+
+## Security Considerations
+
+The homelab is being developed with an emphasis on security-conscious configuration and network isolation.
+
+Key considerations include:
+
+- Maintaining encrypted administrative access through HTTPS.
+- Separating infrastructure and client networks through planned VLAN segmentation.
+- Applying least-privilege principles to future firewall policies.
+- Restricting management access to authorized devices and users.
+- Validating network configurations before introducing additional services.
+
+Public documentation excludes administrative credentials, device-specific identifiers, and sensitive network configuration details.
+
+## Project Status
+
+**Current Phase:** Initial firewall deployment and network configuration.
+
+**Next Milestone:** Complete LAN connectivity validation and establish Web GUI administration before proceeding with Cisco switch configuration and network segmentation.
+
+This documentation will be updated as additional infrastructure components and security controls are implemented.
